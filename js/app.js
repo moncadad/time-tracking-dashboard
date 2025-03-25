@@ -32,6 +32,7 @@ fetch("js/data.json")
       updateMonthlyUI();
     });
 
+     updateWeeklyUI() //called on load for consistency w/ design
     // ----------------------------------------------------
     // DOM UI update functions
     // daily ui
