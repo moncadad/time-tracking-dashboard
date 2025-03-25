@@ -1,0 +1,235 @@
+/* import font */
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+/* ## Layout desktop 1440px, mobile 375px, min screen 320px */
+/* Root level variables ----------------------------------------*/
+:root {
+  /* ## Colors - Primary */
+  --Blue: hsl(246, 80%, 60%);
+  --Light-orange: hsl(15, 100%, 70%); /* (work) */
+  --Soft-blue: hsl(195, 74%, 62%); /* (play):*/
+  --Light-red: hsl(348, 100%, 68%); /* (study):*/
+  --Lime-green: hsl(145, 58%, 55%); /* (exercise):*/
+  --Viole: hsl(264, 64%, 52%); /* (social):*/
+  --Soft-orange: hsl(43, 84%, 65%); /*(self care)*/
+
+  /* ###  Colors - Neutral */
+  --Very-dark-blue: hsl(226, 43%, 10%);
+  --Dark-blue: hsl(235, 46%, 20%);
+  --Dark-blue-hover: hsl(238, 37%, 34%);
+  --Desaturated-blue: hsl(235, 45%, 61%);
+  --Pale-Blue: hsl(236, 100%, 87%);
+
+  /* ## Typography - body size, weight, and font family */
+  --Body-font-size: 18px; /* (card titles e.g. Work, Play) */
+  --Rubik-font-fam: "Rubik", sans-serif;
+  --Font-300: 300;
+  --Font-400: 400;
+  --Font-500: 500;
+}
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px solid black; */
+}
+a {
+  text-decoration: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+}
+body {
+  background-color: var(--Very-dark-blue);
+  color: #fff;
+  min-height: 100vh;
+  font-family: var(--Rubik-font-fam);
+}
+
+.container {
+  display: grid;
+  gap: 24px;
+  width: 88%;
+  margin: 0 auto;
+  padding-block: 80px;
+}
+
+.user {
+  background-color: var(--Dark-blue);
+  border-radius: 24px;
+}
+.user > .user__info {
+  background-color: var(--Blue);
+  border-radius: 24px;
+  padding: 32px;
+  display: flex;
+  align-items: center;
+}
+
+.user-img {
+  width: 72px;
+  border: 2px solid white;
+  border-radius: 50%;
+  margin-right: 24px;
+}
+.username > .title {
+  font-size: 11px;
+  color: var(--Desaturated-blue);
+}
+.username > .name {
+  font-size: 18px;
+  color: var(--Pale-Blue);
+}
+.user > nav {
+  padding: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.user > .nav .btn {
+  border: none;
+  background-color: transparent;
+  color: var(--Desaturated-blue);
+}
+
+.user > .nav .btn:hover,
+.user > .nav .btn:focus {
+  color: var(--Pale-Blue);
+  cursor: pointer;
+}
+
+/* end of user side  -----------------------------------*/
+/* start of report-cards------------------------------- */
+
+.report-card {
+  background-position: top right 20px;
+  background-repeat: no-repeat;
+  border-radius: 24px;
+  padding-bottom: 46px;
+}
+.report-card-1 {
+  background-color: var(--Light-orange);
+  background-image: url(/images/icon-work.svg);
+}
+
+.report-card-2 {
+  background-color: var(--Soft-blue);
+  background-image: url(/images/icon-play.svg);
+}
+.report-card-3 {
+  background-color: var(--Light-red);
+  background-image: url(/images/icon-study.svg);
+}
+.report-card-4 {
+  background-color: var(--Lime-green);
+  background-image: url(/images/icon-exercise.svg);
+}
+.report-card-5 {
+  background-color: var(--Viole);
+  background-image: url(/images/icon-social.svg);
+}
+
+.report-card-6 {
+  background-color: var(--Soft-orange);
+  background-image: url(/images/icon-self-care.svg);
+}
+
+.card-stats {
+  position: relative;
+  z-index: 1;
+  top: 48px;
+  background-color: var(--Dark-blue);
+  /* opacity: 0.5; */
+  border-radius: 24px;
+  padding: 32px 24px;
+}
+.card-stats .title,
+.time {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* font-size: 18px; */
+}
+
+.card-stats .title {
+  font-size: 18px;
+}
+.card-stats .time .current {
+  font-size: 32px;
+}
+.card-stats .time .past {
+  color: var(--Desaturated-blue);
+}
+
+.card-stats:hover {
+  cursor: pointer;
+  background-color: var(--Dark-blue-hover);
+}
+
+/* Responsive Styling */
+
+/* Responsive Styling */
+@media screen and (min-width: 1080px) {
+  body {
+    /* background-color: green; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .container {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1110px;
+  }
+  .user {
+    /* max-width: 256px; */
+    grid-column: 1/2;
+    grid-row: 1/3;
+  }
+
+  .user > .user__info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .user-img {
+    width: 84px;
+    margin: 0 0 42px 0;
+  }
+  .username > .title {
+    font-size: 18px;
+    /* line-height: 1.5; */
+  }
+  .username > .name {
+    font-size: 32px;
+  }
+  .user > nav {
+    padding: 32px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .user > nav .btn {
+    font-size: 18px;
+  }
+  .user > nav .btn + .btn {
+    margin-top: 24px;
+  }
+  .card-stats .time {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .card-stats .time .current {
+    padding-top: 32px;
+    font-size: 48px;
+  }
+}

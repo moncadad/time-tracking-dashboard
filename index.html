@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <!-- font links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- style sheet link -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <!-- Js script file -->
+    <script src="js/app.js" defer></script>
+
+    <title>Frontend Mentor | Time tracking dashboard</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container" id="report">
+      <aside class="user">
+        <div class="user__info">
+          <img
+            src="./images/image-jeremy.png"
+            alt="User Profile"
+            class="user-img"
+            id="userImg"
+          />
+          <div class="username">
+            <p class="title">Report for</p>
+            <p class="name">Jeremy Robson</p>
+          </div>
+        </div>
+        <nav class="nav timeframes">
+          <button id="dailyBtn" class="btn timeframe">Daily</button>
+          <button id="weeklyBtn" class="btn active">Weekly</button>
+          <button id="monthlyBtn" class="btn timeframe">Monthly</button>
+        </nav>
+      </aside>
+      <article class="report-card report-card-1" id="workCard">
+        <div class="card-stats">
+          <h1 class="title">
+            <p class="name">Work</p>
+            <img src="./images/icon-ellipsis.svg" alt="Ellipse" />
+          </h1>
+          <div class="time">
+            <p class="current"><span class="set-current">--</span> hrs</p>
+            <p class="past">
+              <span class="set-timeframe"></span> -
+              <span class="set-previous">-</span>
+            </p>
+          </div>
+        </div>
+      </article>
+      <article class="report-card report-card-2" id="playCard">
+        <div class="card-stats">
+          <h1 class="title">
+            <p class="name">Play</p>
+            <img src="./images/icon-ellipsis.svg" alt="Ellipse" />
+          </h1>
+          <div class="time">
+            <p class="current"><span class="set-current">--</span> hrs</p>
+            <p class="past">
+              <span class="set-timeframe"></span> -
+              <span class="set-previous">-</span>
+            </p>
+          </div>
+        </div>
+      </article>
+      <article class="report-card report-card-3" id="exerciseCard">
+        <div class="card-stats">
+          <h1 class="title">
+            <p class="name">Exercise</p>
+            <img src="./images/icon-ellipsis.svg" alt="Ellipse" />
+          </h1>
+          <div class="time">
+            <p class="current"><span class="set-current">--</span> hrs</p>
+            <p class="past">
+              <span class="set-timeframe"></span> -
+              <span class="set-previous">-</span>
+            </p>
+          </div>
+        </div>
+      </article>
+      <article class="report-card report-card-4" id="exerciseCard">
+        <div class="card-stats">
+          <h1 class="title">
+            <p class="name">Exercise</p>
+            <img src="./images/icon-ellipsis.svg" alt="Ellipse" />
+          </h1>
+          <div class="time">
+            <p class="current"><span class="set-current">--</span> hrs</p>
+            <p class="past">
+              <span class="set-timeframe"></span> -
+              <span class="set-previous">-</span>
+            </p>
+          </div>
+        </div>
+      </article>
+      <article class="report-card report-card-5" id="exerciseCard">
+        <div class="card-stats">
+          <h1 class="title">
+            <p class="name">Social</p>
+            <img src="./images/icon-ellipsis.svg" alt="Ellipse" />
+          </h1>
+          <div class="time">
+            <p class="current"><span class="set-current">--</span> hrs</p>
+            <p class="past">
+              <span class="set-timeframe"></span> -
+              <span class="set-previous">-</span>
+            </p>
+          </div>
+        </div>
+      </article>
+      <article class="report-card report-card-6" id="exerciseCard">
+        <div class="card-stats">
+          <h1 class="title">
+            <p class="name">Self Care</p>
+            <img src="./images/icon-ellipsis.svg" alt="Ellipse" />
+          </h1>
+          <div class="time">
+            <p class="current"><span class="set-current">--</span> hrs</p>
+            <p class="past">
+              <span class="set-timeframe"></span> -
+              <span class="set-previous">-</span>
+            </p>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Denise M.</a>.
+    </div>
+  </body>
+</html>
